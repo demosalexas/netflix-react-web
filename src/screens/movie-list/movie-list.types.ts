@@ -1,0 +1,1 @@
+export const MOVIE_LIST_URL = "/movie-list";
