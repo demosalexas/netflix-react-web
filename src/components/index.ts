@@ -1,9 +1,4 @@
-import FormError from "./form-error/form-error";
-import Button from "./button/button";
-import Input from "./input/input";
-
-export {
-  FormError,
-  Button, 
-  Input,
-};
+export { default as Button } from './button/button';
+export { default as Input } from './input/input';
+export { default as FormError } from './form-error/form-error';
+export { default as NetflixLogo } from './netflix-logo/netflix-logo';

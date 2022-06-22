@@ -1,14 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-import reducers from "./user.reducer";
-
+import reducers from './user.reducer';
 
 const initialState = {
   authenticated: false,
 };
 
 const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   reducers,
   initialState,
 });

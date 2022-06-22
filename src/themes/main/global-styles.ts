@@ -1,8 +1,9 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
 `;
+
+export default GlobalStyles;
