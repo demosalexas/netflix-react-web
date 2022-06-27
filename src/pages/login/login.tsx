@@ -3,10 +3,13 @@ import * as yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { Grid } from '@mui/material';
 
-import { Button, Input, FormError, NetflixLogo } from '@components';
+import {
+  Button, Input, FormError, NetflixLogo,
+} from '@components';
 import { Wrapper } from './login.styled';
 import { authenticated } from '../../store/user/user.selector';
 import userSlice from '../../store/user/user.slice';
+import { Error } from '../../types/yup';
 
 function Login(): JSX.Element {
   const dispatch = useDispatch();
@@ -26,6 +29,13 @@ function Login(): JSX.Element {
     }));
   }, [setData]);
 
+  const resetError = useCallback(
+    (errorMessage: string) => {
+      setError(errorMessage);
+    },
+    [],
+  );
+
   const handleSend = useCallback(async () => {
     try {
       const schema = yup.object().shape({
@@ -35,11 +45,11 @@ function Login(): JSX.Element {
 
       await schema.validate(data);
 
-      setError('');
+      resetError('');
 
-      dispatch(userSlice.actions.authenticated(true));
-    } catch (sendError: unknown) {
-      setError(sendError.errors[0]);
+      dispatch(userSlice.actions.setData({}));
+    } catch (yupError: unknown) {
+      setError((yupError as Error).erros[0]);
     }
   }, [data]);
 

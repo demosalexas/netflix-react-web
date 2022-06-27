@@ -1,9 +1,15 @@
-import { InputStyled } from './input.styled'
+import { InputStyled } from './input.styled';
+import { Props } from './input.type';
 
-function Input(props: any) {
+function Input({
+  type,
+  name,
+  placeholder,
+  onChange,
+}: Props) {
   return (
-    <InputStyled {...props}/>
-  )
+    <InputStyled type={type} name={name} placeholder={placeholder} onChange={onChange} />
+  );
 }
 
-export default Input
+export default Input;
