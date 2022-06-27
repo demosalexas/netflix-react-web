@@ -1,8 +1,6 @@
-import { ShowCard } from '@components';
-
 function Home() {
   return (
-    <ShowCard />
+    <h1>Home</h1>
   );
 }
 

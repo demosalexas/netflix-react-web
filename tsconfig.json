@@ -18,6 +18,7 @@
     "paths": {
       "@components": ["./src/components/index"],
       "@pages": ["./src/pages/index"],
+      "@url-paths": ["./src/url-paths/index"],
       "store/*": ["./src/store/*"]
     }
   },
