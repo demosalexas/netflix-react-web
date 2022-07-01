@@ -17,12 +17,47 @@ function Shows() {
     dispatch(showsActions.getMyList());
   }, []);
 
+  const devShows = [
+    {
+      id: 1,
+      title: 'https://via.placeholder.com/210?text=1',
+    },
+    {
+      id: 2,
+      title: 'https://via.placeholder.com/210?text=2',
+    },
+    {
+      id: 3,
+      title: 'https://via.placeholder.com/210?text=3',
+    },
+    {
+      id: 4,
+      title: 'https://via.placeholder.com/210?text=4',
+    },
+    {
+      id: 1,
+      title: 'https://via.placeholder.com/210?text=5',
+    },
+    {
+      id: 2,
+      title: 'https://via.placeholder.com/210?text=6',
+    },
+    {
+      id: 3,
+      title: 'https://via.placeholder.com/210?text=7',
+    },
+    {
+      id: 4,
+      title: 'https://via.placeholder.com/210?text=8',
+    },
+  ];
+
   return (
     <>
       <Header />
-      { myList && <ShowsRow shows={myList} title="Minha Lista" />}
-      { movies && <ShowsRow shows={movies} title="Filmes" />}
-      { tvShows && <ShowsRow shows={tvShows} title="Séries" />}
+      { devShows && <ShowsRow shows={devShows} title="Minha Lista" />}
+      { devShows && <ShowsRow shows={devShows} title="Filmes" />}
+      { devShows && <ShowsRow shows={devShows} title="Séries" />}
       <Footer />
     </>
   );

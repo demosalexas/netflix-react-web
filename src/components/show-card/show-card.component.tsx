@@ -1,8 +1,10 @@
-import { Container } from './show-card.styled';
+import { Container, ShowPoster } from './show-card.styled';
 
-function ShowCard() {
+function ShowCard({ show }: any) {
   return (
-    <Container />
+    <Container>
+      <ShowPoster src={show} alt={show} />
+    </Container>
   );
 }
 

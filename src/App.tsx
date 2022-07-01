@@ -21,7 +21,7 @@ function App(): JSX.Element {
           <Route element={<h1>Olá</h1>} path={HOME_URL} />
           <Route element={<Login />} path={LOGIN_URL} />
           <Route element={<Guard><Profiles /></Guard>} path={PROFILES_URL} />
-          <Route element={<Guard><Shows /></Guard>} path={SHOWS_URL} />
+          <Route element={<Shows />} path={SHOWS_URL} />
           <Route element={<Guard><Shows /></Guard>} path={MOVIES_URL} />
           <Route element={<Guard><Shows /></Guard>} path={TV_SHOWS_URL} />
           <Route element={<Guard><Shows /></Guard>} path={MY_LIST_URL} />
